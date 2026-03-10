@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 石墨到金刚石转化模拟器 (Graphite to Diamond Transformation Simulator)
 
-# Run and deploy your AI Studio app
+这是一个基于 React, Three.js 和 Tailwind CSS 构建的交互式 3D 模拟器，展示了碳原子在极端高温高压下从石墨结构转化为金刚石结构的过程。
 
-This contains everything you need to run your app locally.
+## 功能特点
 
-View your app in AI Studio: https://ai.studio/apps/a0a68ab6-de75-4a7c-ba8e-7c24b8469e3e
+- **3D 交互模拟**：实时展示原子位置的动态迁移。
+- **环境参数控制**：通过滑块调节温度和压力强度。
+- **多层结构支持**：支持 1 到 5 层的石墨烯堆叠模拟。
+- **精确测量**：在 1-2 层模式下提供实时键长和层间距测量。
+- **多视角切换**：支持 ISO、俯视和正视（水平层显示）视角。
 
-## Run Locally
+## 本地开发
 
-**Prerequisites:**  Node.js
+1. **克隆仓库**:
+   ```bash
+   git clone <your-repo-url>
+   cd <repo-name>
+   ```
 
+2. **安装依赖**:
+   ```bash
+   npm install
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+3. **启动开发服务器**:
+   ```bash
+   npm run dev
+   ```
+
+4. **构建生产版本**:
+   ```bash
+   npm run build
+   ```
+
+## 部署到 GitHub Pages
+
+项目已配置 GitHub Actions 自动部署。
+
+1. 将代码推送到 GitHub 的 `main` 分支。
+2. 在 GitHub 仓库设置中：
+   - 进入 **Settings** > **Pages**。
+   - 在 **Build and deployment** > **Source** 下选择 **GitHub Actions**。
+3. 每次推送代码后，工作流会自动构建并部署到 `https://<username>.github.io/<repo-name>/`。
+
+## 技术栈
+
+- **React 19**
+- **Three.js / React Three Fiber** (3D 渲染)
+- **Tailwind CSS 4** (样式)
+- **Motion** (动画)
+- **Vite** (构建工具)
